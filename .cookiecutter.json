@@ -1,0 +1,14 @@
+{
+  "_output_dir": "/Users/tclick/Developer/python",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Timothy H. Click, Ph.D.",
+  "copyright_year": "2022",
+  "development_status": "Development Status :: 3 - Alpha",
+  "email": "Timothy.Click@briarcliff.edu",
+  "friendly_name": "Molecular Dynamics Trajectory Analysis",
+  "github_user": "tclick",
+  "license": "GPL-3.0",
+  "package_name": "mdta",
+  "project_name": "mdta",
+  "version": "0.0.0"
+}
