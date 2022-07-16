@@ -16,7 +16,7 @@
 import pytest
 from click.testing import CliRunner
 
-from mdta import __main__
+from mdta import __main__, __version__
 
 
 @pytest.fixture
@@ -29,3 +29,17 @@ def test_main_succeeds(runner: CliRunner) -> None:
     """It exits with a status code of zero."""
     result = runner.invoke(__main__.main)
     assert result.exit_code == 0
+
+
+def test_main_help(runner: CliRunner) -> None:
+    """Ensure that the help menu works."""
+    result = runner.invoke(__main__.main, "-h")
+    assert result.exit_code == 0
+    assert "--version" in result.output
+
+
+def test_main_version(runner: CliRunner) -> None:
+    """Test that the version numbers match."""
+    result = runner.invoke(__main__.main, "--version")
+    assert result.exit_code == 0
+    assert f"version {__version__}" in result.output
