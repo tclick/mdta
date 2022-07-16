@@ -12,8 +12,4 @@
 #  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 #  THIS SOFTWARE.
 # --------------------------------------------------------------------------------------
-"""Command-line interface."""
-from mdta.cli import main
-
-if __name__ == "__main__":
-    main()
+"""Module for command-line plugins."""
