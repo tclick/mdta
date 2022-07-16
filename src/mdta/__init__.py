@@ -25,7 +25,7 @@ if TYPE_CHECKING:
 else:
     PathLike = Union[str, os.PathLike]
 
-__version__: str = "3.0.0-rc3"
+__version__: str = "0.0.0"
 
 _MASK: Dict[str, str] = dict(
     ca="protein and name CA",
