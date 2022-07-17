@@ -1,0 +1,22 @@
+analysis: "coordinates" # Can either be 'coordinate' or 'dihedral'
+mask: "ca"
+verbose: False # Verbose output
+debug: False # Ouput debugging information
+graph: False # Save graphical data
+
+# Topology and trajectory files
+topology: "data/protein.parm7"
+# Explicit list of trajectory files
+trajfiles:
+  - "protein.nc"
+
+pname: "protein" # name of protein
+startres: 1 # Starting residue number
+endres: 133 # Final residue number
+icadim: 8 # Number of dimensions calculated
+skip: 1 # Number of frames to use
+
+# Locations of output data
+outdir: "/tmp/qaa/savefiles/" # Output subdirectory
+logfile: "/tmp/qaa/log/log.txt"
+figdir: "/tmp/qaa/savefiles/figures/" # Figure subdirectory if 'graph: True'

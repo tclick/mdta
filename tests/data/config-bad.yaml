@@ -1,0 +1,26 @@
+analysis: "coordinates" # Can either be 'coordinate' or 'dihedral'
+verbose: False # Verbose output
+debug: False # Ouput debugging information
+graph: False # Save graphical data
+
+# Topology and trajectory files
+topology: "pentapeptide/init-ww-penta.pdb"
+# Explicit list of trajectory files
+trajfiles:
+  - "pentapeptide/job1-protein.dcd"
+  - "pentapeptide/job2-protein.dcd"
+# Define trajectory filenames using regular expressions and zero-padded numbers
+trajform:
+  - "pnas2013-native-1-protein-***.dcd"
+  - "1-10"
+
+pname: "pentapeptide" # name of protein
+startres: 1 # Starting residue number
+endres: 5 # Final residue number
+icadim: 8 # Number of dimensions calculated
+skip: 1 # Number of frames to use
+
+# Locations of output data
+outdir: "/tmp/qaa/savefiles/" # Output subdirectory
+logfile: "/tmp/qaa/log/log.txt"
+figdir: "/tmp/qaa/savefiles/figures/" # Figure subdirectory if 'graph: True'
