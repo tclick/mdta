@@ -2728,6 +2728,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "types-setuptools"
+version = "63.2.0"
+description = "Typing stubs for setuptools"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.3.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -2848,7 +2856,7 @@ jupyter = ["jupyter", "jupyterlab", "jupyterlab-code-formatter", "jupyterlab-mat
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.11"
-content-hash = "b7e4703bc8211133ee728228a49b5d7e69b7e4a74a367a857fe7ab85c1021659"
+content-hash = "de6d248faf487405f91997e64fe98dbb29ceefb1b3a0e502dd345eefc297087b"
 
 [metadata.files]
 alabaster = [
@@ -4007,6 +4015,7 @@ types-click = [
 ]
 types-pkg-resources = []
 types-pyyaml = []
+types-setuptools = []
 typing-extensions = []
 urllib3 = []
 virtualenv = []
