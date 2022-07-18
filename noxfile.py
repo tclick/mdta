@@ -37,7 +37,7 @@ def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
         Poetry session
     """
     if session.bin is None:
-        return
+        return  # type: ignore
 
     virtualenv = session.env.get("VIRTUAL_ENV")
     if virtualenv is None:
