@@ -13,6 +13,7 @@
 """Test ConfigParser class."""
 from dataclasses import is_dataclass
 
+import click
 import pytest
 
 from mdta.parsers.configuration.configparser import Config, configure
@@ -78,19 +79,19 @@ class TestConfigParser:
     """Test ConfigParser class."""
 
     @pytest.fixture
-    def context(self) -> Config:
-        """Create an mock click.Context object.
+    def ctx(self) -> click.Context:
+        """Create a mock click.Context object.
 
         Returns
         -------
-        Config
+        Context
             a mock click.Context object
         """
-        config = Config()
-        config.default_map = {}
-        return config
+        ctx = click.Context(click.Command("mock"))
+        ctx.default_map = {}
+        return ctx
 
-    def test_configure(self, context: Config) -> None:
+    def test_configure(self, ctx: click.Context) -> None:
         """Test the configure function.
 
         GIVEN a click.Context and a filename
@@ -99,11 +100,11 @@ class TestConfigParser:
 
         Parameters
         ----------
-        context: Config
+        ctx: click.Context
             mock object
         """
-        configure(context, [], TRAJFILES)
+        configure(ctx, [], TRAJFILES)
 
-        assert len(context.default_map) > 0
-        assert "trajfiles" in context.default_map
-        assert context.default_map["trajfiles"] is not None
+        assert len(ctx.default_map) > 0  # type: ignore
+        assert "trajfiles" in ctx.default_map  # type: ignore
+        assert ctx.default_map["trajfiles"] is not None  # type: ignore
