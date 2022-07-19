@@ -23,11 +23,22 @@
 
 ## Features
 
-- TODO
+- Calculate r.m.s.d. of a protein
+- Calculate r.m.s.f. of a protein
+- Perform spatial or spatio-temporal decorrelation
+  - Aligned Cartesian coordinates
+  - `φ/ψ` dihedral angles
+- Perform fluctuation matching
+  - Models for various biomolecules
+  - Cluster analysis
+  - Spatial or spatio-temporal decorrelation
 
 ## Requirements
 
-- TODO
+- Python 3.8+ (https://www.python.org)
+- MDAnalysis 2.1+ (https://www.mdanalysis.org)
+- modin (https://github.com/modin-project/modin)
+- Academic charmm (https://www.academiccharmm.org)
 
 ## Installation
 
